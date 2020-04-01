@@ -5,4 +5,6 @@ RUN git clone https://github.com/hashicorp/terraform.git -b master && \
     mv $GOPATH/bin/terraform-bundle  /bin/ && \
     rm -rf $GOPATH/terraform
 
+RUN apt update && apt -y install unzip
+
 CMD ["/bin/bash"]
